@@ -37,12 +37,18 @@ namespace CodeFirstNewDatabaseSample
             public virtual List<Post> Posts { get; set; }
         }
 
+        public class User
+        {
+            public string Username { get; set; }
+            public string DisplayName { get; set; }
+        }
+
         public class BloggingContext : DbContext
         {
             public DbSet<Blog> Blogs { get; set; }
             public DbSet<Post> Posts { get; set; }
             public DbSet<Tag> Tags { get; set; }
-
+            public DbSet<User> Users { get; set; }
         }
 
 
